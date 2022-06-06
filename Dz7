@@ -6,11 +6,12 @@ class Program
     {
         Console.WriteLine("Сколько у вас золота?");
         int gold = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Здравствуй дорогой путник, я смотрю у тебя есть золото. За него ты можешь купить кристаллы курс сейчас : 1 кристалл = 30 золота.");
-        Console.WriteLine("Сколько золота вы хотите конвертировать в кристаллы?");
+        int well = 30;
+        Console.WriteLine($"Здравствуй дорогой путник, я смотрю у тебя есть золото. За него ты можешь купить кристаллы курс сейчас : 1 кристалл = {well} золота.");
+        Console.WriteLine("Сколько кристаллов вы хотите получить?");
         int trade = Convert.ToInt32(Console.ReadLine());
-        gold -= trade;
-        int crystals = trade / 30;
+        gold -= trade * well;
+        int crystals = trade;
         Console.WriteLine("После чего загадочный торговец жмёт вам руку и вы обмениваетесь ресурсами.");
         Console.WriteLine($"У вас теперь {crystals} кристаллов. И {gold} золота");
     }
